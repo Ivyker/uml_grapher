@@ -3,20 +3,28 @@ package fr.lernejo.umlgrapher;
 
 public class UmlGraph {
 
-    public UmlGraph(Class<?>... class1){
+    private final Class<?>[] gr;
 
+    public UmlGraph(Class<?>... class1){
+        this.gr = class1;
     }
 
     public String as(GraphType graphType){
-        if (graphType == GraphType.Mermaid){
-            return """
-            classDiagram
-            class Machin {
-                <<interface>>
+        
+        for(Class classeDiagram : gr){
+            if (graphType == GraphType.Mermaid){
+                return """
+                classDiagram
+                class"+ classeDiagram.getSimpleName() +" {
+                    <<interface>>
+                }
+                """;
             }
-            """;
-        }
+
+        } 
         return  "";
+
+        
     }
     
 }
