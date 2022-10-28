@@ -1,10 +1,6 @@
 package fr.lernejo.umlgrapher;
 
-
-import java.util.List;
 import java.util.Set;
-
-
 
 public class UmlRelation {
 
@@ -19,7 +15,7 @@ public class UmlRelation {
         String link = "";
 
         for (UmlType umlType : listClass){
-            Class relationClass[] = umlType.getaClass().getInterfaces();
+            Class[] relationClass = umlType.getaClass().getInterfaces();
 
             for (Class classe : relationClass){
                 if (umlType.getaClass().getSuperclass() == null){

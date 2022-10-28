@@ -22,7 +22,4 @@ public class Launcher implements Runnable{
         int exitCode = new CommandLine(new Launcher()).execute(args);
         System.exit(exitCode);
     }
-
-
-
 }

@@ -1,6 +1,5 @@
 package fr.lernejo.umlgrapher;
 
-import java.util.Set;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,6 @@ public class InternalGraphRepresentation {
     public InternalGraphRepresentation(Class pClassGraph) {
         this.aClassGraph = pClassGraph;
     }
-
     public List<Class> containsClass(List<Class> pListClass, Class... tabClass){
         for(Class classe : tabClass){
             if(!pListClass.contains(classe)){
@@ -21,12 +19,9 @@ public class InternalGraphRepresentation {
         }
         return pListClass;
     }
-
     public List<Class> classesRelation(){
         List<Class> pList = new ArrayList<>();
         pList = containsClass(pList, this.aClassGraph);
         return pList;
     }
-
-
 }

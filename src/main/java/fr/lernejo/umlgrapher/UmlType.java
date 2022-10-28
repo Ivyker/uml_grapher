@@ -15,14 +15,10 @@ public class UmlType {
     public Class getaClass() {
         return this.aClass;
     }
-
     public String getaClassName(){
         return this.aClassName;
     }
-
     public String getaClassPackage(){
         return this.aClassPackage;
     }
-
-
 }

@@ -15,7 +15,6 @@ public class Links {
     public String getaLink(){
         return this.aLink;
     }
-
     public String getaChild(){
         return this.aChild;
     }
